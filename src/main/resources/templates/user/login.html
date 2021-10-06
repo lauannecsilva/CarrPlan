@@ -32,7 +32,7 @@ xmlns:th="http://www.thymeleaf.org">
                         <input class="inputLogin" type="password" placeholder="Senha">
                     </div>
                     <div class="containerInput">
-                        <a href="/home"><button class="btnLogin">Entrar</button></a>
+                       <button class="btnLogin" onclick="pagHome()" type="button">Entrar</button>
                     </div>
 
                     <div class="loginFooter">
@@ -42,5 +42,14 @@ xmlns:th="http://www.thymeleaf.org">
             </div>
         </div>
     </div>
+    <script>
+        function pagHome()
+        {
+            window.location.href = "/home";
+      
+           
+        }
+
+    </script>
 </body>
 </html>
