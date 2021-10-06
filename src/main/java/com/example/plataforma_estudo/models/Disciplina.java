@@ -1,14 +1,40 @@
 package com.example.plataforma_estudo.models;
 
+import javax.persistence.Column;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
 public class Disciplina {
 
+    @Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+    @Column(length = 255, nullable = false)
     private String  nome;
+
+    @Column(length = 255, nullable = false)
     private String cronograma;
+
+    @Column(length = 255, nullable = false)
     private String sinopse;
 
+    @Embedded
+    private Topicos topicos;
 
+    
+
+
+    public Topicos getTopicos() {
+        return topicos;
+    }
+    public void setTopicos(Topicos topicos) {
+        this.topicos = topicos;
+    }
     public Integer getId() {
         return id;
     }
