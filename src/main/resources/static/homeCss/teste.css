@@ -42,7 +42,7 @@
     opacity:0 ;
 }
 
-.action .menu.action{
+.action .menu.active{
     top: 80px;
     visibility: visible;
     opacity:1 ;
