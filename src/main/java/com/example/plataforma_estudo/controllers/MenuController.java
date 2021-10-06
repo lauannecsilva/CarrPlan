@@ -10,10 +10,10 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-import org.springframework.validation.BindingResult;*/
+import org.springframework.validation.BindingResult;
 
 import com.example.plataforma_estudo.service.UsuarioService;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Autowired;*/
 import org.springframework.stereotype.Controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,11 +26,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class MenuController {
 
-	@Autowired
+	/*@Autowired
 	private UsuarioService usuarioService;
 	
 	@Autowired
-	private UsuarioDao usuarioDao;
+	private UsuarioDao usuarioDao;*/
 
 	@GetMapping("/login")
     public String exibirLogin() {
@@ -78,4 +78,24 @@ public class MenuController {
 		return "redirect:/cadastroLivros";
 		
 	}*/
+
+	@GetMapping("/aulas")
+    public String exibirAulas() {
+		return "/aluno/aulas";
+	}
+
+	@GetMapping("/home")
+    public String exibirHome() {
+		return "/aluno/home";
+	}
+
+	@GetMapping("/cadastroDisciplina")
+	public String exibirCadastroDisciplina() {
+		return "/professor/cadDisciplina";
+	}
+
+	@GetMapping("/teste")
+	public String pagTeste() {
+		return "/aluno/teste";
+	}
 }
