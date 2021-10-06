@@ -2,15 +2,52 @@ package com.example.plataforma_estudo.models;
 
 import java.time.LocalDate;
 
+/*import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;*/
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
+
+
+@Entity
 public class Usuario {
     
+    @Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+   /* @NotBlank(message = "Nome é necessário")*/
+	@Column(length = 255, nullable = false)
     private String nome;
+
+ 
+    @Column(length = 255, nullable = false)
     private String genero;
+
+    @Column(length = 11 , nullable = false)
     private String cpf;
+    
+
+    @Column(length = 255, nullable = false)
     private String senha;
+
+    /*@Email(message = "Email inválido")*/
+    /*@NotEmpty(message = "Email é necessário")*/
+    @Column(length = 255, nullable = false)
     private String email;
+
+   /* @NotNull(message = "Data de Nascimento é necessária")*/
+	@DateTimeFormat(pattern="yyyy-MM-dd")
+	/*@Past(message = "Deve ser uma data de nascimento anterior a data atual")*/
+	@Column(name = "data_nasc")
     private LocalDate dataNascimento;
+
+    @Column(columnDefinition = "tinyint(1) default 0", nullable = false)
     private boolean ativo;
 
     
