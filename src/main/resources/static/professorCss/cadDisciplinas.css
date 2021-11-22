@@ -1,0 +1,95 @@
+.containerHome{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerHeader{
+    width: 100%;
+    background: #1a73e8;
+
+    display: flex;
+    justify-content: center;
+}
+
+.contentHeader{
+    height: 10rem;
+}
+
+.BtnIconReturn{
+    position: absolute;
+}
+
+.IconReturn{
+    color: #FFFFFF;
+}
+
+.titleHeader{
+    color: #FFFFFF;
+    padding: 2rem 0;
+}
+
+.contentHeader{
+    margin: 1rem 0 0;
+    width: 96%;
+    max-width: 55rem;
+}
+
+.containerInputSearch{
+    display: flex;
+    gap: 1rem;
+}
+
+.InputSearch{
+    outline: none;
+
+    width: 100%;
+    height: 2.5rem;
+
+    padding: 0.3rem;
+
+    border-radius: 0.3rem;
+    border: 0.1rem solid #bbbbbb;
+}
+
+@media (min-width:720px) {
+    .InputSearch{
+        width: calc(100% * (1/2));
+    }
+}
+
+@media (min-width:1024px) {
+    .InputSearch{
+        width: calc(100% * (1/3));
+    }
+}
+
+.containerContent{
+    margin: 2rem 0;
+    width: 96%;
+    max-width: 55rem;
+}
+
+.containerForm{
+    background-color: #FFFFFF;
+    padding: 1rem 0.7rem;
+    border-radius: 0.3rem;
+}
+
+.containerInput{
+    display: flex;
+    flex-direction: column;
+}
+
+.containerInput Input{
+    outline: none;
+
+    width: 100%;
+    height: 2.5rem;
+
+    padding: 0.3rem;
+
+    border-radius: 0.3rem;
+    border: 0.1rem solid #bbbbbb;
+}

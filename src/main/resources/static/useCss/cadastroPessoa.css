@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+
+:root{
+    --bg-primary: #020c9b;
+    font-size: 75%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+input,button{
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.globalContainer{
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    background-image: url(../img/planodefundo2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+    background-color: #f2f2f2;
+}
+
+.containerContent{
+    width: 100%;
+    /* border-radius: 1rem; */
+    /* box-shadow: 1px 5px 20px 1px #0c0c0c93; */
+}
+
+.containerimg{
+    width: 100%;
+    height: 45vh;
+
+    /* border-radius: 1rem 1rem 0 0; */
+
+    background-image: url(../img/planodefundo2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contentText{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    background: #000000aa;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.containerimg h1{
+    font-size: 2.2rem;
+
+    color: #ffffff;
+    display: flex;
+    width: 85%;
+}
+
+.containerimg p{
+    padding-top: 1rem;
+    color: #ffffff;
+    display: flex;
+    width: 85%;
+    font-size: 1.1rem;
+}
+
+.containerLogin{
+    width: 100%;
+    height: 60vh;
+    position: absolute;
+    bottom: 0;
+    padding: 1rem;
+    background: #fcfcfc;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.containerInputCad{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inputLogin{
+    padding: 0.5rem 0.8rem;
+    margin-bottom: 1rem;
+
+    width: 90%;
+    max-width: 30rem;
+
+    font-size: 1.4rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid #bbbbbb;
+
+    transition: 0.5s;
+}
+
+.inputLogin:focus{
+    border: 0.1rem solid #1a73e8;
+}
+
+.inputLogin::-webkit-input-placeholder{ 
+    color:#cccccc; 
+}
+
+.containerBtnCad{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentBtn{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnLogin{
+    width: 90%;
+    max-width: 30rem;
+    padding: 0.7rem 0.9rem;
+
+    background: #1a73e8;
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border: none;
+
+    border-radius: 0.5rem;
+}
+
+.containerInputCadCheck{
+    padding: 1rem 2.5%;
+    justify-content: start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.contentCheck{
+    padding: 0 1rem;
+    font-size: 1.2rem;
+}
+
+.loginTitle{
+    color: #0c0c0c;
+
+    width: 90%;
+    max-width: 26rem;   
+    display: flex;
+
+    padding-bottom: 1.7rem;
+    padding-top: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.textFooter{
+    font-size: 1.1rem;
+    font-weight: 500;
+
+    padding-bottom: 1rem;
+}
+
+.loginFooter{
+    width: 100%;
+    padding-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textCreate{
+    color: #1a73e8;
+}
+
+@media(min-width: 660px){ 
+    .containerContent{
+        width: 100%;
+        max-width: 60rem;
+        border-radius: 1rem; 
+        box-shadow: 1px 5px 20px 1px #0c0c0c93;
+    }
+    .containerLogin{
+        width: 100%;
+        height: auto;
+        border-radius: 0 0 1rem 1rem;
+        position: static;
+    }
+    .containerimg{
+        width: 100%;
+        height: 20rem;
+    
+        border-radius: 1rem 1rem 0 0;
+    }
+    .globalContainer{
+        justify-content: center;
+    }
+
+    .containerInputCad{
+        width: calc(100% * 1/2);
+    }
+
+    .formContainer{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .containerInputCadCheck{
+        padding: 0 2.5%;
+        justify-content: start;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .contentCheck{
+        padding: 0 1rem;
+        font-size: 1.2rem;
+    }
+
+    .containerTitleCad{
+        width: 90%;
+    }
+
+    .contentBtn{
+        display: flex;
+    }
+
+    .containerBtnCad{
+        width: 100%;
+    }
+
+}
+

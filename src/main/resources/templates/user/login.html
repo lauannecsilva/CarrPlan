@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR"
+xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/useCss/style.css">
+</head>
+<body>
+    <div class="globalContainer">
+        <div class="containerContent">
+            <div class="containerimg">
+                <div class="contentText">
+                    <h1>Faça o seu Futuro</h1>
+                    <p>Junte-se a nossa comunidade</p>
+                </div>
+            </div>
+            <div class="containerLogin">
+                <form action="">
+                    <div class="containerInput">
+                        <div class="loginTitle">
+                            Log in
+                        </div>
+                    </div>
+                    <div class="containerInput">
+                        <input class="inputLogin" type="Email" placeholder="Email">
+                    </div>
+                    <div class="containerInput">
+                        <input class="inputLogin" type="password" placeholder="Senha">
+                    </div>
+                    <div class="containerInput">
+                       <button class="btnLogin" onclick="pagHome()" type="button">Entrar</button>
+                    </div>
+
+                    <div class="loginFooter">
+                        <p class="textFooter">Não possui conta? <a class="textCreate" href="/cadastro">Obter conta</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function pagHome()
+        {
+            window.location.href = "/home";
+      
+           
+        }
+
+    </script>
+</body>
+</html>
