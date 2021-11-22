@@ -47,8 +47,7 @@ public class Usuario {
 	@Column(name = "data_nasc")
     private LocalDate dataNascimento;
 
-    @Column(columnDefinition = "tinyint(1) default 0", nullable = false)
-    private boolean ativo;
+    
 
     
     public Integer getId() {
@@ -93,17 +92,12 @@ public class Usuario {
     public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
-    public boolean isAtivo() {
-        return ativo;
-    }
-    public void setAtivo(boolean ativo) {
-        this.ativo = ativo;
-    }
+   
 
 
     @Override
     public String toString() {
-        return "usuario [ativo=" + ativo + ", cpf=" + cpf + ", dataNascimento=" + dataNascimento + ", email=" + email
+        return "usuario [ cpf=" + cpf + ", dataNascimento=" + dataNascimento + ", email=" + email
                 + ", genero=" + genero + ", id=" + id + ", nome=" + nome + ", senha=" + senha + "]";
     }
     
