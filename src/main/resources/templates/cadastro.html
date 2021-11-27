@@ -1,71 +1,91 @@
 <!DOCTYPE html>
-<html lang="pt-BR"
-xmlns="http://www.w3.org/1999/xhtml"
-xmlns:th="http://www.thymeleaf.org">
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cadastro</title>
 
-    <!-- Estilo -->
-    <link rel="stylesheet" href="/useCss/cadastroPessoa.css">
+	<!-- Estilo -->
+	<link rel="stylesheet" href="/useCss/cadastroPessoa.css">
 </head>
-<body>
-    <div class="globalContainer">
-        <div class="containerContent">
-            <div class="containerimg">
-                <div class="contentText">
-                    <h1>Faça o seu Futuro</h1>
-                    <p>Junte-se a nossa comunidade</p>
-                </div>
-            </div>
-            <div class="containerLogin">
-                <form action="" class="formContainer">
-                    <div class="containerTitleCad">
-                        <div class="loginTitle">
-                            Create account
-                        </div>
-                    </div>
-                    <div class="containerInputCad">
-                        <input class="inputLogin"  id="nome" type="text" placeholder="Nome">
-                    </div>
-                    <div class="containerInputCad">
-                        <input class="inputLogin" id="email" type="Email" placeholder="Email">
-                    </div>
-                    <div class="containerInputCad">
-                        <input class="inputLogin" id="senha" type="password" placeholder="Senha">
-                    </div>
-                    <div class="containerInputCad">
-                        <input class="inputLogin" id="data_nascimento" type="date" placeholder="Data de nascimento">
-                    </div>
-                    <div class="containerInputCad">
-                        <input class="inputLogin" id="cpf" type="cpf" placeholder="CPF">
-                    </div>
-                    <div class="containerInputCad containerInputCadCheck">
-                        <div class="contentCheck">
-                            <input class="checkLogin" id="Masculino" name="genero" type="radio" placeholder="Masculino">
-                            <label for="Masculino">Masculino</label>
-                        </div>
-                        <div class="contentCheck">
-                            <input class="checkLogin" id="Feminino" name="genero" type="radio" placeholder="Feminino">
-                            <label for="Feminino">Feminino</label>
-                        </div>
-                    </div>
-                    
-                    <div class="containerBtnCad">
-                        <div class="contentBtn">
-                            <button class="btnLogin">Entrar</button>
-                        </div>
-                    </div>
 
-                    <div class="loginFooter">
-                        <p class="textFooter">Já possui uma conta? <a class="textCreate" href="/login">Realizar login</a></p>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+<body>
+	<div class="globalContainer">
+		<div class="containerContent">
+			<div class="containerimg">
+				<div class="contentText">
+					<h1>Faça o seu Futuro</h1>
+					<p>Junte-se a nossa comunidade</p>
+				</div>
+			</div>
+			<div class="containerLogin">
+				<form method="POST" th:action="@{/cadastrarUsuario}" class="formContainer" th:object="${usuario}">
+
+					<div th:if="${!#strings.isEmpty(msgSucessoAdd)}"
+						class="alert alert-success alert-dismissible fade show" role="alert">
+						[[${msgSucessoAdd}]]
+					</div>
+					<div th:if="${!#strings.isEmpty(msgErroAdd)}" class="alert alert-danger alert-dismissible fade show"
+						role="alert">
+						[[${msgErroAdd}]]
+					</div>
+
+					<div class="containerTitleCad">
+						<div class="loginTitle">
+							Crie sua Conta
+						</div>
+					</div>
+					<div class="containerInputCad">
+
+						<input class="inputLogin" id="nome" type="text" placeholder="Nome" th:field="*{nome}"
+							name="nome">
+					</div>
+					<div class="containerInputCad">
+						<input class="inputLogin" id="email" type="Email" placeholder="Email" name="email">
+					</div>
+					<div class="containerInputCad">
+						<input class="inputLogin" id="senha" type="password" placeholder="Senha" name="senha">
+					</div>
+					<div class="containerInputCad">
+						<input class="inputLogin" id="data_nascimento" type="date" placeholder="Data de nascimento"
+							name="dataNascimento">
+					</div>
+					<div class="containerInputCad">
+						<input class="inputLogin" id="cpf" type="cpf" placeholder="CPF" name="cpf">
+					</div>
+					<!--<div class="containerInputCad containerInputCadCheck">
+                        <div class="contentCheck">
+                            <input class="checkLogin" id="Professor" name="tipo" type="radio" placeholder="Professor"  th:field="*{tipoUsuario}">
+                            <label for="Professor" >Professor</label>
+                        </div>
+                        <div class="contentCheck">
+                            <input class="checkLogin" id="Aluno" name="tipo" type="radio" placeholder="Aluno"  th:field="*{tipoUsuario}">
+                            <label for="Aluno">Aluno</label>
+                        </div>
+                    </div>-->
+					<select th:field="*{tipoUsuario}">
+						<option th:each="tipoUsuario : ${T(com.example.plataforma_estudo.models.TipoUsuario).values()}"
+							th:value="${tipoUsuario}" th:text="${tipoUsuario.displayValue}"></option>
+					</select>
+
+
+
+					<div class="containerBtnCad">
+						<div class="contentBtn">
+							<button type="submit" class="btnLogin">Cadastrar</button>
+						</div>
+					</div>
+
+					<div class="loginFooter">
+						<p class="textFooter">Já possui uma conta? <a class="textCreate" href="/login">Realizar
+								login</a></p>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>

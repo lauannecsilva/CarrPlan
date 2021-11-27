@@ -12,7 +12,7 @@ public class Disciplina {
 
     @Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer id_disciplina;
 
     @Column(length = 255, nullable = false)
     private String  nome;
@@ -23,47 +23,15 @@ public class Disciplina {
     @Column(length = 255, nullable = false)
     private String sinopse;
 
-    @Embedded
-    private Topicos topicos;
+    
+    private String nivel;
+   
+    
 
     
 
 
-    public Topicos getTopicos() {
-        return topicos;
-    }
-    public void setTopicos(Topicos topicos) {
-        this.topicos = topicos;
-    }
-    public Integer getId() {
-        return id;
-    }
-    public void setId(Integer id) {
-        this.id = id;
-    }
-    public String getNome() {
-        return nome;
-    }
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-    public String getCronograma() {
-        return cronograma;
-    }
-    public void setCronograma(String cronograma) {
-        this.cronograma = cronograma;
-    }
-    public String getSinopse() {
-        return sinopse;
-    }
-    public void setSinopse(String sinopse) {
-        this.sinopse = sinopse;
-    }
-    @Override
-    public String toString() {
-        return "Disciplina [cronograma=" + cronograma + ", id=" + id + ", nome=" + nome + ", sinopse=" + sinopse + "]";
-    }
-
+    
     
     
 

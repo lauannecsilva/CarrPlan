@@ -1,11 +1,12 @@
 package com.example.plataforma_estudo.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
 import com.example.plataforma_estudo.models.Usuario;
 
-
+@Repository
 public interface UsuarioDao  extends JpaRepository<Usuario, Integer> {
 
     
