@@ -184,6 +184,35 @@
     }
 }
 
+.btnDelete{
+    width: 50%;
+    height: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #e81a1a;
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    border-radius: 0.4rem;
+}
+
+.btnUpdate{
+    width: 50%;
+    height: 3rem;
+    margin-right: 0.7rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #1a73e8;
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    border-radius: 0.4rem;
+}
+
 .btnFooterCardSubject{
     width: 80%;
     height: 3rem;
