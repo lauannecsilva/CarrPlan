@@ -12,11 +12,12 @@
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body>
+
     <div class="globalContainer">
         <div class="containerHome">
             <div class="containerHeader">
                 <div class="contentHeader">
-                    <a class="BtnIconReturn" href="/login"><i class="fa fa-arrow-left IconReturn"></i></a>
+                    <a class="BtnIconReturn" href="/home"><i class="fa fa-arrow-left IconReturn"></i></a>
                     <h1 class="titleHeader">Cadastrar Disciplinas</h1>
                     <form method="POST" th:action="@{/createDisciplina}"
                         th:object="${disciplina}" class="containerForm">

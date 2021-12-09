@@ -48,6 +48,13 @@ public class MenuController {
 		return "/user/login";
 	}
 
+	/*
+	@GetMapping("/home_user")
+    public String exibirHomeUser() {
+		return "/aluno/home_user";
+	}
+	*/
+
 	/*@GetMapping("/login")
 	public ModelAndView login(HttpSession session) {
 		ModelAndView mv = new ModelAndView("/login");
