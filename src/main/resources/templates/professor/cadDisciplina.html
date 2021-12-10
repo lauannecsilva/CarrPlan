@@ -19,7 +19,7 @@
                 <div class="contentHeader">
                     <a class="BtnIconReturn" href="/home"><i class="fa fa-arrow-left IconReturn"></i></a>
                     <h1 class="titleHeader">Cadastrar Disciplinas</h1>
-                    <form method="POST" th:action="@{/createDisciplina}"
+                    <form method="POST" th:action="@{/disciplina/createDisciplina}"
                         th:object="${disciplina}" class="containerForm">
                         <div class="containerInput">
                             <label for="">Nome Materia</label>
@@ -31,9 +31,9 @@
                             name="textoApresentacao">
                         </div>
                         <div class="containerInput">
-                            <label for="">valor</label>
-                            <input id="valor" type="text" th:field="*{valor}" 
-                            name="valor">
+                            <label for="">Nivel</label>
+                            <input id="nivel" type="text" th:field="*{valor}" 
+                            name="nivel">
                         </div>
                         <div class="containerInput">
                             <label for="">Conteudo Programatico</label>

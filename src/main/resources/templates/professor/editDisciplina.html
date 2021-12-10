@@ -18,7 +18,7 @@
                 <div class="contentHeader">
                     <a class="BtnIconReturn" href="/login"><i class="fa fa-arrow-left IconReturn"></i></a>
                     <h1 class="titleHeader">Cadastrar Disciplinas</h1>
-                    <form method="PUT" th:action="@{/updateDisciplina}"
+                    <form method="POST" th:action="@{/disciplina/updateDisciplina}"
                         th:object="${disciplina}" class="containerForm">
                         <div class="containerInput">
                             <label for="">Nome Materia</label>

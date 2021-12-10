@@ -19,20 +19,25 @@ xmlns:th="http://www.thymeleaf.org">
                 </div>
             </div>
             <div class="containerLogin">
-                <form action="">
+                <form th:action="@{/login}" method="POST">
                     <div class="containerInput">
                         <div class="loginTitle">
                             Log in
                         </div>
                     </div>
+                    
+                    <div th:if="${!#strings.isEmpty(msgErro)}" class="alert alert-danger">
+						[[${msgErro}]]
+					</div>
+                    
                     <div class="containerInput">
-                        <input class="inputLogin" type="Email" placeholder="Email">
+                        <input class="inputLogin" type="Email" placeholder="Email" name="email">
                     </div>
                     <div class="containerInput">
-                        <input class="inputLogin" type="password" placeholder="Senha">
+                        <input class="inputLogin" type="password" placeholder="Senha" name="senha">
                     </div>
                     <div class="containerInput">
-                       <button class="btnLogin" onclick="pagHome()" type="button">Entrar</button>
+                       <button class="btnLogin" type="submit">Entrar</button>
                     </div>
 
                     <div class="loginFooter">
@@ -42,14 +47,5 @@ xmlns:th="http://www.thymeleaf.org">
             </div>
         </div>
     </div>
-    <script>
-        function pagHome()
-        {
-            window.location.href = "/home";
-      
-           
-        }
-
-    </script>
 </body>
 </html>

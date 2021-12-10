@@ -31,8 +31,30 @@
                     </div>
                 </div>
             </div>
-            <div class="containerContent">
-           
+            <div class="containerContent" th:each="disciplina: ${disciplina}">
+                <!--------------------------------->
+                <div class="containerCardClassroom">
+                    <div class="headerCardClassroom">
+                        <div class="cardClassroomImg">
+                            <img src="/imagCurso/python.jpg" alt="">
+                        </div>
+                        <div class="cardClassroomTitle">
+                            <h2 class="ClassroomTitle" th:text="${disciplina.nome}"></h2>
+                            <!--<h4 class="ClassroomSubtitle">Jairo</h4>-->
+                        </div>
+                    </div>
+                    <div class="contentCardClassroom">
+                        <p class="phraseCardClassroom" th:text="${disciplina.categoria}"></p>
+                        <p class="descriptionCardClassroom" th:text="${disciplina.TextoApresentacao}"></p>
+                    </div>
+                    <div class="footerCardClassroom">
+                        <div class="footerCardMoney">
+                            <p class="footerCardMoneyLabel">valor</p>
+                            <p class="footerCardMoneyText" th:text="${disciplina.valor}"></p>
+                        </div>
+                        
+                    </div>
+                </div>
             </div>
             <div class="containerFooter"></div>
         </div>
