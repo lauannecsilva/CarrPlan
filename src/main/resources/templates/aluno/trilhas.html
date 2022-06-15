@@ -19,22 +19,20 @@
                 <div class="contentHeader">
                     <a class="BtnIconReturn" href="/home_user"><i class="fa fa-arrow-left IconReturn"></i></a>
                     <h1 class="titleHeader">Trilhas</h1>
-                   <!---- <div class="containerInputSearch">
-                        <select name="" id="" class="InputSearch">
-                            <option value="" selected>-------</option>
-                            <option value="">Front-end</option>
-                            <option value="">Back-end</option>
-                            <option value="">Banco de Dados</option>
-                            <option value="">Extras</option>
-                        </select>
-                        <input type="text" class="InputSearch" placeholder="Pesquisa">
-                    </div>--->
                 </div>
             </div>
             <div class="containerContent">
-           
             </div>
-            <div class="containerFooter"></div>
+            <div class="footerCardClassroom">
+                <div class="footerCardMoney">
+                    <p class="footerCardMoneyLabel">Nivel</p>
+                    <p class="footerCardMoneyText" th:text="${trilha.nivel}"></p>
+                </div>
+                <div class="footerCardMoneyBtn">
+                    <a class="btnUpdate" th:href="@{/trilha/update/{id}(id=${trilha.id_trilha})}">Editar</a>
+                    <a class="btnDelete" th:href="@{/trilha/delete/{id}(id=${trilha.id_trilha})}">Deletar Trilha</a>
+                </div>
+            </div>
         </div>
     </div>
 </body>

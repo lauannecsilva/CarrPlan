@@ -14,24 +14,17 @@
 </head>
 <body>
     <div class="globalContainer">
-        <div class="containerHome">
-            <div class="containerHeader">
-                <div class="contentHeader">
-                    <a class="BtnIconReturn" href="/home_user"><i class="fa fa-arrow-left IconReturn"></i></a>
-                    <h1 class="titleHeader">Dev Python Junior</h1>
+      <div class="containerHome">
+        <div class="containerHeader">
+          <div class="contentHeader">
+            <a class="BtnIconReturn" href="/home_user"><i class="fa fa-arrow-left IconReturn"></i></a>
+            <h1 class="titleHeader">Dev Java Junior</h1>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/album/">
     
-<link href="/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-
-    <!-- Favicons -->
-<link rel="apple-touch-icon" href="/docs/5.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/docs/5.2/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/docs/5.2/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
-<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon.ico">
-<meta name="theme-color" content="#712cf9">
+    <link href="/docs/5.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" 
+    crossorigin="anonymous">
 
 
     <style>
@@ -85,6 +78,13 @@
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
       }
+
+      .contentVideo{
+        width: 100%;
+        height: 60vh;
+        max-width: 60rem;
+        max-height: 30rem;
+      }
     </style>
 
     
@@ -96,41 +96,24 @@
   </div>
 </header>
 
-<main>
-<div class="album py-5 bg-light">
-    <div class="container">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" 
-            role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" 
-            focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/>
-            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Video</text></svg>
+<main class="album py-5 bg-light">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="col">
+        <div class="card shadow-sm">
+          <iframe class="contentVideo"  src="https://www.youtube.com/embed/tgbNymZ7vqY">
+          </iframe>
 
-            <div class="card-body">
-              <p class="card-text">Conceitos Basicos de Python</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-
-            <video width="99%" height="99%"  controls>
-                <source src="/src/main/resources/static/media/Python#01.mp4" type="video/mp4">                
-              </video>
-              <video width="320" height="240" controls="controls" autoplay="autoplay">
-                <source src="/media/Python#01.mp4">
-              Seu navegador n~~ao suporta tags de vídeo.
-              </video>
-
-            <div class="card-body">
-              <p class="card-text">Estrutura</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <small class="text-muted">9 mins</small>
-              </div>
+          <div class="card-body">
+            <p class="card-text">
+              If you are getting started with Spring Boot,or “Spring” in general,
+                start by reading this section. It answers the basic “what?”, 
+                “how?” and “why?” questions. It includes an introduction to Spring Boot, 
+                along with installation instructions. We then walk you through building 
+                your first Spring Boot application, discussing some core principles as we go.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+            <small class="text-muted">9 mins</small>
             </div>
           </div>
         </div>

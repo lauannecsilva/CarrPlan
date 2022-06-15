@@ -40,7 +40,6 @@ a{
     align-items: center;
     flex-direction: column;
     background-color: #d4d4d4;
-    background-image: url(../img/planodefundo2.jpg);
     /*background-image: url(/src/main/resources/static/img/planodefundo2.jpg);*/
     background-repeat: no-repeat;
     background-size: cover;

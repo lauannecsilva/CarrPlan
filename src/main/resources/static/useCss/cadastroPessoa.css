@@ -33,7 +33,6 @@ a{
     align-items: center;
     flex-direction: column;
 
-    background-image: url(../img/planodefundo2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -196,6 +195,28 @@ a{
 
 .textCreate{
     color: #1a73e8;
+}
+
+.containerSelectCad{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.selectLogin{
+    padding: 0.5rem 0.8rem;
+    margin-bottom: 1rem;
+
+    width: 90%;
+    max-width: 30rem;
+
+    font-size: 1.4rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid #bbbbbb;
+
+    transition: 0.5s;
 }
 
 @media(min-width: 660px){ 

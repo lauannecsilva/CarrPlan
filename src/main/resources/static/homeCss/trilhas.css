@@ -1,28 +1,25 @@
 .containerHome{
     width: 100%;
+    min-height: 100vh;
     
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url("../img/planodefundo2.jpg") no-repeat center center;
+    background-color: #e9e7e7;
 }
 
 .fa-arrow-left:before {
     content: "\f060";
-    color: #FA5E1A;
+    color: #FFFFFF;
 }
 
 .containerHeader{
     width: 100%;
-    background: #e9e7e7;
+    background: #FA5E1A;
     height: 100px;
 
     display: flex;
     justify-content: center;
-}
-
-.contentHeader{
-    height: 10rem;
 }
 
 .BtnIconReturn{
@@ -34,7 +31,7 @@
 }
 
 .titleHeader{
-    color: #FA5E1A;
+    color: #FFFFFF;
     padding: 3.2rem 0;
 }
 
@@ -137,7 +134,7 @@
 
 .footerCardClassroom{
     margin-top: 1rem;
-    background-color: #ebebeb;
+    background-color: #cbcbcb;
     padding: 0.5rem 1rem;
     border-radius: 0 0 0.3rem 0.3rem;
     display: flex;

@@ -65,10 +65,12 @@
                             <label for="Aluno">Aluno</label>
                         </div>
                     </div>-->
-					<select th:field="*{tipoUsuario}">
-						<option th:each="tipoUsuario : ${T(com.example.plataforma_estudo.models.TipoUsuario).values()}"
-							th:value="${tipoUsuario}" th:text="${tipoUsuario.displayValue}"></option>
-					</select>
+					<div class="containerInputCad">
+						<select class="selectLogin" th:field="*{tipoUsuario}">
+							<option th:each="tipoUsuario : ${T(com.example.plataforma_estudo.models.TipoUsuario).values()}"
+								th:value="${tipoUsuario}" th:text="${tipoUsuario.displayValue}"></option>
+						</select>
+					</div>
 
 
 
