@@ -1,3 +1,3 @@
-# Plataforma_Estudo
+# CarrPlan
 Projeto para faculdade
-Grupo: Alcir, Guilherme, Jairo, Lauanne e Tiago
+Grupo: Alcir, Jairo, Lauanne e Tiago
