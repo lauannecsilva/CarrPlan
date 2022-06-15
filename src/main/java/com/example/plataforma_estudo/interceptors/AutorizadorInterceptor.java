@@ -16,7 +16,7 @@ public class AutorizadorInterceptor implements HandlerInterceptor {
 	
 	private final String[] PAGINAS_ESTATICAS = {"/homeCss/", "/icon/", "/imagCurso/", "/img/", "/js/", "/professorCss", "/useCss", "styleGlobal.css"};
 	private final String[] PAGINAS_DESLOGADO = {"/", "/login", "/cadastroUsuario"};
-	private final String[] PAGINAS_LOGADO = {"/home", "/home_user", "/disciplina/", PAGINA_ACESSO_NEGADO};
+	private final String[] PAGINAS_LOGADO = {"/home", "/home_user", "/trilha/", PAGINA_ACESSO_NEGADO};
 	
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
@@ -30,9 +30,9 @@ public class AutorizadorInterceptor implements HandlerInterceptor {
 			return true;
 		}
 		
-		if (urlRequisitada.contains("/disciplina/")) {
+		if (urlRequisitada.contains("/trilha/")) {
 			if (estaLogado) {
-				if (usuarioLogado.getTipoUsuario().equals(TipoUsuario.PROFESSOR)) {
+				if (usuarioLogado.getTipoUsuario().equals(TipoUsuario.ADMINISTRADOR)) {
 					return true;
 				} else {
 					response.sendRedirect("/home_user");

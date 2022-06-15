@@ -1,8 +1,12 @@
 package com.example.plataforma_estudo.models;
 
+
+
+
 public class Permissoes{
     
     private Integer id_permissao;
+
     private String nome;
 
     public Integer getid_permissao() {

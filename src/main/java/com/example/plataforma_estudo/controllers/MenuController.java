@@ -32,10 +32,10 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.example.plataforma_estudo.dao.UsuarioDao;
 import com.example.plataforma_estudo.exception.UsuarioInexistenteException;
 import com.example.plataforma_estudo.exception.UsuarioInvalidoException;
-import com.example.plataforma_estudo.models.Disciplina;
 import com.example.plataforma_estudo.models.TipoUsuario;
+import com.example.plataforma_estudo.models.Trilha;
 import com.example.plataforma_estudo.models.Usuario;
-import com.example.plataforma_estudo.service.DisciplinaService;
+import com.example.plataforma_estudo.service.TrilhaService;
 import com.example.plataforma_estudo.service.UsuarioService;
 
 
@@ -53,7 +53,7 @@ public class MenuController {
 	private UsuarioDao usuarioDao;
 
     @Autowired
-    private DisciplinaService disService;
+    private TrilhaService triService;
 
 	@GetMapping("/login")
     public ModelAndView exibirLogin(@RequestParam(required = false) String erro, RedirectAttributes ra) {
@@ -121,6 +121,11 @@ public class MenuController {
 	@GetMapping("/home_user")
     public String exibirHomeUser() {
 		return "/aluno/home_user";
+	}
+
+	@GetMapping("/paginaTeste")
+    public String exibirpaginaTeste() {
+		return "/aluno/paginaTeste";
 	}
 	
 
@@ -191,27 +196,27 @@ public class MenuController {
 		return "redirect:/cadastroUsuario";
 	}
 	
-	@GetMapping("/disciplina_aluno")
-	public ModelAndView listarDisciplinasAluno() {
-		ModelAndView mv = new ModelAndView("aluno/DisciplinasAluno");
-        Iterable<Disciplina> disciplina = disService.list();
-        mv.addObject("disciplina", disciplina);
+	@GetMapping("/trilha_aluno")
+	public ModelAndView listarTrilhasAluno() {
+		ModelAndView mv = new ModelAndView("aluno/trilhaAluno");
+        Iterable<Trilha> trilha = triService.list();
+        mv.addObject("trilha", trilha);
         return mv;
 	}
 	
 	@GetMapping("/aulas")
     public String exibirAulas() {
-		return "/aluno/aulas";
+		return "/aluno/trilhas";
 	}
 
 	@GetMapping("/home")
     public String exibirHome() {
-		return "/professor/home";
+		return "/administrador/home";
 	}
 
-	@GetMapping("/cadastroDisciplina")
-	public String exibirCadastroDisciplina() {
-		return "/professor/cadDisciplina";
+	@GetMapping("/cadastroTrilha")
+	public String exibirCadastroTrilha() {
+		return "/administrador/cadTrilha";
 	}
 
 	@GetMapping("/teste")

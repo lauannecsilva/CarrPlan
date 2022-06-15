@@ -1,5 +1,8 @@
 package com.example.plataforma_estudo.models;
 
+import javax.persistence.Entity;
+
+
 public class Role{
     
     private Integer id;

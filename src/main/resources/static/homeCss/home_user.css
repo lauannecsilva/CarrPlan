@@ -4,7 +4,7 @@
     padding: 0;
 }
 a{
-    color: white;
+    color: #FA5E1A;
     text-decoration: none;
     transition: 0.3s;
 }
@@ -23,7 +23,8 @@ nav{
     justify-content: space-around;
     align-items: center;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background:#1a73e8;
+    /*background:#1a73e8;*/
+    background: #e9e7e7;
     height: 10vh;/*serve para dizer o tamanho da faixa azul*/
 }
 main{
@@ -42,7 +43,7 @@ main{
 .mobile-menu div{
     width: 32px;
     height: 2px;
-    background:#fff;
+    background:#FA5E1A;
     margin: 8px;
     transition: 0.3s;
     display: none;
