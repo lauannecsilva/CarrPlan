@@ -2,6 +2,8 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 a{
     
@@ -63,6 +65,152 @@ main{
     justify-content: space-between;
     align-items: center;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.content{
+    width: 100%;
+    min-height: 86vh;
+    padding: 1.2rem;
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.contentHistory{
+    position: relative;
+    width: calc(55% - 0.5rem);
+    height: fit-content;
+    padding: 0.7rem 1rem;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 0.3rem;
+}
+
+.contentDisciplina{
+    position: relative;
+    width: calc(45% - 0.5rem);
+    height: fit-content;
+    padding: 0.7rem 1rem;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 0.3rem;
+}
+
+.contentHistory .line{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0.5rem;
+    background-color: #f59835;
+    border-radius: 0.3rem 0.3rem 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.contentDisciplina .line{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0.5rem;
+    background-color: #f59835;
+    border-radius: 0.3rem 0.3rem 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.contentBoxHistory{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.contentBoxDisciplina{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.contentTitle .title{
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.boxHistory{
+    margin-bottom: 0.5rem;
+    width: calc(50% - 0.25rem);
+    border-radius: 0.2rem;
+    background: #F2F2F2;
+}
+
+.boxDisciplina{
+    width: 100%;
+    border-radius: 0.2rem;
+}
+
+.headerHistory{
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.icon{
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-right: 0.5rem;
+
+    background-color: #f59835;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon img{
+    width: 2.2rem;
+}
+
+.contentProgress{
+    width: calc(100% - 2rem);
+    height: 0.4rem;
+    margin: 0 1rem 1rem;
+    background-color: #2AC255;
+    border-radius: 0.2rem;
+}
+
+.contentBtn{
+    width: 100%;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.btnUpdate{
+    height: 2rem;
+    padding: 0 1rem;
+    margin-right: 0.7rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #1a73e8;
+    color: #FFFFFF;
+    font-size: 1rem;
+    border-radius: 0.4rem;
 }
 
 @media(max-width: 999px){
